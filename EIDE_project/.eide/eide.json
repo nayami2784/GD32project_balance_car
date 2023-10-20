@@ -1,0 +1,190 @@
+{
+  "name": "GD32F450",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "App",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "CMSIS",
+        "files": [
+          {
+            "path": "../Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f450_470.s"
+          },
+          {
+            "path": "../Firmware/CMSIS/GD/GD32F4xx/Source/system_gd32f4xx.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Doc",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "Firmware",
+        "files": [
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_exti.c"
+          },
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_gpio.c"
+          },
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_misc.c"
+          },
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_rcu.c"
+          },
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_syscfg.c"
+          },
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_timer.c"
+          },
+          {
+            "path": "../Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_usart.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Hardware",
+        "files": [
+          {
+            "path": "../Hardware/key/bsp_key.c"
+          },
+          {
+            "path": "../Hardware/led/bsp_led.c"
+          },
+          {
+            "path": "../Hardware/pwm/bsp_pwm.c"
+          },
+          {
+            "path": "../Hardware/timer/bsp_basic_timer.c"
+          },
+          {
+            "path": "../Hardware/usart/bsp_usart.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "User",
+        "files": [
+          {
+            "path": "../User/gd32f4xx_it.c"
+          },
+          {
+            "path": "../User/main.c"
+          },
+          {
+            "path": "../User/sys.c"
+          },
+          {
+            "path": "../User/systick.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": "GD32F470ZG",
+  "packDir": ".pack/GigaDevice/GD32F4xx_DFP.3.1.0",
+  "miscInfo": {
+    "uid": "dc0232acb02fcab1383a232656ba390c"
+  },
+  "targets": {
+    "GD32F450": {
+      "excludeList": [],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x5000"
+              },
+              "isChecked": true,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x08000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "stm32f4x",
+        "interface": "cmsis-dap-v1",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "../Firmware/GD32F4xx_standard_peripheral/Include",
+          "../Firmware/CMSIS",
+          "../Firmware/CMSIS/GD/GD32F4xx/Include",
+          "../User",
+          "../Hardware/led",
+          "../Hardware/usart",
+          "../Hardware/key",
+          "../Hardware/timer",
+          "../Hardware/pwm",
+          ".cmsis/include",
+          "../Project/RTE/_GD32F450",
+          ".eide/deps"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "GD32F470"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}
